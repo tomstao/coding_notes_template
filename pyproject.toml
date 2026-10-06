@@ -1,0 +1,11 @@
+[project]
+name = "codingquestions"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "ipytest>=0.14.2",
+    "jupyterlab>=4.6.4",
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.6",
+    "pytest>=9.1.1",
+]
