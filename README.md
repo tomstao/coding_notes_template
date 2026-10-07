@@ -113,6 +113,21 @@ These are JupyterLab's shortcuts. PyCharm's notebook editor uses most of them to
 7. Fix the code → **re-run the solution cell** → re-run the tests.
 8. Fill in **Takeaways**. This is the part that helps most when you review later.
 
+### Let Claude Code take the note
+
+This repo ships a [Claude Code](https://claude.com/claude-code) skill in
+`.claude/skills/take-note/`. Paste a problem and your solution into Claude Code and ask it
+to take a note (or type `/take-note`). It will:
+
+1. create the note with `new_note.py` (numbered by the LeetCode problem number),
+2. fill every section: problem, thinking, your solution plus the best-practice solution(s)
+   with complexities, tests over every approach, a `%timeit` comparison, and takeaways
+   (the pattern, your mistakes, related problems),
+3. run the notebook to check every test passes,
+4. explain in chat why your solution is slow and what pattern to remember.
+
+It only commits when you ask it to.
+
 ### How the tests work
 
 The template uses [pytest](https://docs.pytest.org/) through
